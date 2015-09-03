@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<title>Photo Portfolio | Jovanie De La Cruz</title>
+	<meta name="description" content="Portfolio of Photography by Jovanie De La Cruz. Operating in the Chicagoland area. Hire me for your next event! I do portraits, photoshoots, event coverage. I've done a couple of Quinceanera's and interned at an Online Store Warehouse as their on-site Product-Photographer.">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/favicon//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon//favicon-16x16.png">
+    <link rel="manifest" href="/favicon//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/layout.css">
+    <link href="css/lightbox.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>a
+	<![endif]-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+	<script type="text/javascript" src="http://www.queness.com/js/bsa.js"></script>
+
+	<script type="text/javascript">
+	$(function () {
+
+		var filterList = {
+
+			init: function () {
+
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});
+
+			},
+
+			hoverEffect: function () {
+
+				// Simple parallax effect
+				$('#portfoliolist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
+					}
+				);
+
+			}
+
+		};
+
+		// Run the show!
+		filterList.init();
+
+
+	});
+	</script>
+
+</head>
+<body>
+
+<!--<div id="info">
+	<div class="info-wrapper">
+		<a href="http://www.queness.com/post/14577/create-a-simple-responsive-portfolio-page-with-filtering-and-hover-effect"><b>Create A Simple Responsive Portfolio Page with Filtering and Hover Effect</b></a>
+		<p>In this tutorial, I'm going to show you how to create portfolio page with filtering and also hover effect for each of your project. We will be using a CSS3 and jQuery filter & sort plugin called MixItUp.  <a href="http://www.queness.com/post/14577/create-a-simple-responsive-portfolio-page-with-filtering-and-hover-effect">Read Tutorial</a></p>
+	</div>
+</div>-->
+
+	<div class="container">
+	<div id="header" style="margin-left:auto;margin-right:auto;text-align:center;">
+        <img src="img/logo.png" height="140px" align="center">
+
+	</div>
+        <div id="ulbar" style="text-align:center;margin-left:auto;margin-right:auto;" width="100%">
+		<ul id="filters" class="clearfix">
+		    <div id="sidenavb"  style="text-align:center;color:#778899;width:100%;">Jovanie De La Cruz</div>
+		    <div id="sidenavb"  style="text-align:center;color:#778899;width:100%;"><br>(224) 422-9368</div>
+		    <li><div id="sidenav" style="color:#778899;position:absolute;left:0;padding-left:10px;">Jovanie De La Cruz</div></li><br>
+			<li><span class="filter active" data-filter="port event ps street prod graph body">All</span></li>
+			<!--<li><span class="filter" data-filter="port">Portait</span></li>-->
+			<li><span class="filter" data-filter="ps">Photoshoot</span></li>
+			<li><span class="filter" data-filter="event">Event</span></li>
+			<li><span class="filter" data-filter="street">Street</span></li>
+			<li><span class="filter" data-filter="prod">Product</span></li>
+			    <style>li span a{
+			            display: inline-block;	
+		                text-decoration:none;
+	                	color:#666;
+	                	cursor: pointer;
+			    }
+			    </style>
+			<li><span><a href="https://www.flickr.com/photos/dalvertu">More Photos</a></span></li>
+			<li><div id="sidenav" style="color:#778899;position:absolute;right:0;padding-right:10px;">(224) 422-9368</div></li>
+
+		</ul>
+        </div>
+		<div id="portfoliolist">
+			<div class="portfolio street" data-cat="street">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/sand.jpg" data-lightbox="1" data-title="Sand Texture | UIUC"><img src="img/portfolios/s/sand.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Sand Texture | UIUC</a>
+							<span class="text-category">Street</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio prod" data-cat="prod">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/books.jpg" data-lightbox="1" data-title="Books | UIUC"><img src="img/portfolios/s/books.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Books | UIUC</a>
+							<span class="text-category">Products</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio street" data-cat="street">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/mb.jpg" data-lightbox="1" data-title="Motorbike | UIUC"><img src="img/portfolios/s/mb.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Motorbike | UIUC</a>
+							<span class="text-category">Street</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio event" data-cat="event">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/pitch.jpg" data-lightbox="1" data-title="Powerful Pitch | Innovation"><img src="img/portfolios/s/pitch.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Powerful Pitch | Innovation</a>
+							<span class="text-category">Event</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio ps" data-cat="ps">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/1.jpg" data-lightbox="1" data-title="Raizele Arceo | LookBook"><img src="img/portfolios/s/1.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Raizele Arceo | LookBook</a>
+							<span class="text-category">Photoshoot</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio ps" data-cat="ps">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/6.jpg" data-lightbox="1" data-title="Stephanie | Quinceanera"><img src="img/portfolios/s/6.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Stephanie | Quinceanera</a>
+							<span class="text-category">Photoshoot</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio event" data-cat="event">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/4.jpg" data-lightbox="1" data-title="Stephanie | Quinceanera"><img src="img/portfolios/s/4.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Stephanie | Quinceanera</a>
+							<span class="text-category">Event</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio street" data-cat="street">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/07.jpg" data-lightbox="1" data-title="Chintatown | Chicago"><img src="img/portfolios/s/07.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Chintatown | Chicago</a>
+							<span class="text-category">Street</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio street" data-cat="street">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/9.jpg" data-lightbox="1" data-title="Chicago Theater | Chicago"><img src="img/portfolios/s/9.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Chicago Theater | Chicago</a>
+							<span class="text-category">Street</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio street" data-cat="street">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/18.jpg" data-lightbox="1" data-title="Chinese New Year Parade Dragon | Chicago"><img src="img/portfolios/s/18.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Chinese New Year Parade Dragon | Chicago</a>
+							<span class="text-category">Street</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio event" data-cat="event">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/3.jpg" data-lightbox="1" data-title="Stephanie | Quinceanera"><img src="img/portfolios/s/3.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Stephanie | Quinceanera</a>
+							<span class="text-category">Event</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio street" data-cat="street">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/11.jpg" data-lightbox="1" data-title="Arrow in the Alley | Elmhurst"><img src="img/portfolios/s/11.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Arrow in the Alley | Elmhurst</a>
+							<span class="text-category">Street</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio ps" data-cat="ps">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/2.jpg" data-lightbox="1" data-title="Raizele Arceo | PeachPress"><img src="img/portfolios/s/2.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Raizele Arceo | PeachPress</a>
+							<span class="text-category">Photoshoot</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio street" data-cat="street">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/14.jpg" data-lightbox="1" data-title="Hawaiian Ornaments | Brookfield Zoo"><img src="img/portfolios/s/14.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Hawaiian Ornaments | Brookfield Zoo</a>
+							<span class="text-category">Street</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio street" data-cat="street">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/15.jpg" data-lightbox="1" data-title="Timed Sunset | Schiller Park"><img src="img/portfolios/s/15.jpg" alt="" /></a>
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Timed Sunset | Schiller Park</a>
+							<span class="text-category">Street</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio street" data-cat="street">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/16.jpg" data-lightbox="1" data-title="Circular Lights | Chicago"><img src="img/portfolios/s/16.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Circular Lights | Chicago</a>
+							<span class="text-category">Street</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="portfolio prod" data-cat="prod">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/17.jpg" data-lightbox="17" data-title="Star Lord | Figure"><img src="img/portfolios/s/17.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Star Lord | Figure</a>
+							<span class="text-category">Product</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio prod" data-cat="prod">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/19.jpg" data-lightbox="1" data-title="Stephanie's Ring | Quinceanera"><img src="img/portfolios/s/19.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Stephanie's Ring | Quinceanera</a>
+							<span class="text-category">Product</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="portfolio street" data-cat="street">
+				<div class="portfolio-wrapper">
+					<a href="img/portfolios/sr.jpg" data-lightbox="1" data-title="Statue Reading | UIUC"><img src="img/portfolios/s/sr.jpg" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Statue Reading | UIUC</a>
+							<span class="text-category">Street</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+			<br>
+
+
+	</div><!-- container -->
+	<footer>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <div id="social">
+          <a href="https://www.facebook.com/dalvertuphoto"  target="_blank"><span>Facebook</span></a>
+          <a href="http://joillini.tumblr.com/"  target="_blank"><span>Tumblr</span></a>
+          <a href="http://twitter.com/jovanie_d"  target="_blank"><span>Twitter</span></a>
+          <a href="http://instagram.com/_u/instajova"  target="_blank"><span>Instagram</span></a>
+          <a href="https://www.flickr.com/photos/dalvertu"  target="_blank"><span>Flickr</span></a>
+          <a href="mailto:jovanie@dalvertu.com"  target="_blank"><span>Email</span></a>
+          <a href=""><span>Love</span></a>
+        </div>
+        <div id="copyright" style="color:#778899;text-align:center;margin-left:-32px;margin-top:70px;">All photos and content &copy; Jovanie De La Cruz 2015</div>
+
+    </footer>
+
+    <script src="js/lightbox.min.js"></script>
+</body>
+</html>
