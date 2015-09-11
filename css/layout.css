@@ -140,7 +140,7 @@ br
     #sidenavb {display:none;
     }
 
-/* #Tablet (Portrait) */
+/* #Tablet (Portrait) 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	body { max-width:959px;}
 	.container {
@@ -155,7 +155,48 @@ br
     #sidenavb {display:block;
     }
 }
+*/
 
+@media only screen and (min-width:981px) and (max-width: 1200px) {
+	.container { 
+		width: 97%; 
+	}
+
+	#header img{
+		width:20%;
+		height:auto;
+	}
+
+	#filters li{
+		font-size:1.8em;
+	}
+
+	#sidenavb {
+		font-size: 1.8em;
+	}
+
+	footer {
+  		transform: scale(1.2);
+	}
+
+	
+	#portfoliolist .portfolio {
+		width:23%;
+		margin:1%;
+	}		
+
+	#ads {
+		display:none;
+	}
+	br 
+    { 
+       display: block;
+    }
+	#sidenav {display:none;
+    }
+    #sidenavb {display:inline;
+    }
+}
 
 
 
