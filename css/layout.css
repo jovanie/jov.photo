@@ -178,6 +178,11 @@ br
 	#sidenavb {
 		font-size: 2.5em;
 	}
+
+	footer {
+  		transform: scale(2);
+	}
+
 	
 	#portfoliolist .portfolio {
 		width:48%;
