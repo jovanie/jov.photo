@@ -8,7 +8,7 @@ body {
 #info {
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
-	border-radius:5px;				
+	border-radius:5px;
 	background:#fcf8e3;
 	border:1px solid  #fbeed5;
 	width:95%;
@@ -28,28 +28,28 @@ body {
 	-o-box-sizing: border-box;
 
 	}
-	
+
 	#info a {
 		color:#c09853;
 		text-decoration:none;
 	}
-	
+
 	#info p {
 		margin:5px 0 0 0;
 	}
 
 
-.container { 
-	position: relative; 
-	width: 80%; 
-	margin: 0 auto; 
+.container {
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
 	-webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
-  transition: all 1s ease;	
+  transition: all 1s ease;
   padding-bottom:150px;
 }
- 
+
 #filters {
 	margin:1%;
 	padding:0;
@@ -62,23 +62,23 @@ body {
 		display: inline-block;
 
 	}
-	
+
 	#filters li span {
 
 		display: inline-block;
-		padding:5px 20px;		
+		padding:5px 20px;
 		text-decoration:none;
 		color:#666;
 		cursor: pointer;
 	}
-	
+
 	#filters li span.active {
 		background: #e95a44;
 		color:#fff;
 	}
- 
 
- 
+
+
 #portfoliolist .portfolio {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -101,7 +101,7 @@ body {
 		max-width:100%;
 		position: relative;
 	}
-	
+
 	.portfolio .label {
 		position: absolute;
 		width: 100%;
@@ -117,37 +117,37 @@ body {
 			top:0;
 			left:0;
 		}
-	
+
 		.portfolio .label-text {
 			color:#fff;
 			position: relative;
 			z-index:500;
 			padding:5px 8px;
 		}
-			
+
 			.portfolio .text-category {
 				display:block;
 				font-size:9px;
 			}
-	
-	
-	
 
-br 
-    { 
+
+
+
+br
+    {
        display: none;
     }
     #sidenavb {display:none;
     }
 
-/* #Tablet (Portrait) 
+/* #Tablet (Portrait)
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	body { max-width:959px;}
 	.container {
-		width: 768px; 
+		width: 768px;
 	}
-	br 
-    { 
+	br
+    {
        display: block;
     }
     #sidenav {display:none;
@@ -158,8 +158,8 @@ br
 */
 
 @media only screen and (min-width:981px) and (max-width: 1200px) {
-	.container { 
-		width: 97%; 
+	.container {
+		width: 97%;
 		overflow: hidden;
 	}
 
@@ -180,17 +180,17 @@ br
   		transform: scale(1.2);
 	}
 
-	
+
 	#portfoliolist .portfolio {
 		width:23%;
 		margin:1%;
-	}		
+	}
 
 	#ads {
 		display:none;
 	}
-	br 
-    { 
+	br
+    {
        display: block;
     }
 	#sidenav {display:none;
@@ -204,8 +204,8 @@ br
 /*  #Mobile (Portrait) - Note: Design for a width of 320px */
 @media only screen and (max-width: 980px) {
 	body { max-width:980px;}
-	.container { 
-		width: 97%; 
+	.container {
+		width: 97%;
 		overflow: hidden;
 	}
 
@@ -226,24 +226,24 @@ br
   		transform: scale(2);
 	}
 
-	
+
 	#portfoliolist .portfolio {
 		width:48%;
 		margin:1%;
-	}		
+	}
 
 	#ads {
 		display:none;
 	}
-	br 
-    { 
+	br
+    {
        display: block;
     }
 	#sidenav {display:none;
     }
     #sidenavb {display:inline;
     }
-    
+
 }
 
 
@@ -252,12 +252,12 @@ br
 	.container {
 		width: 80%;
 	}
-	
+
 	#ads {
 		display:none;
 	}
-	br 
-    { 
+	br
+    {
        display: block;
     }
     #sidenav {display:none;
@@ -384,8 +384,8 @@ footer {
 
 #social a span:before {
   content:'';
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #fff;
@@ -408,22 +408,17 @@ footer {
 content:"\f09a";
 }
 #social a:nth-of-type(2):before {
-content:"\f173";
-}
-#social a:nth-of-type(3):before {
 content:"\f099";
 }
-#social a:nth-of-type(4):before {
+#social a:nth-of-type(3):before {
 content:"\f16d";
 }
-#social a:nth-of-type(5):before {
+#social a:nth-of-type(4):before {
 content:"\f16e ";
 }
-#social a:nth-of-type(6):before {
+#social a:nth-of-type(5):before {
 content:"\f0e0 ";
 }
-#social a:nth-of-type(7):before {
+#social a:nth-of-type(6):before {
 content:"\f004 ";
 }
-
-
